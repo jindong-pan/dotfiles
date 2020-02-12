@@ -16,6 +16,9 @@ fi
 
 #setup DISPLAY at first login
 export DISPLAY=127.0.0.1:0.0
+set -o vi
+alias vinu='vim -c "set nu"'
+alias vihls='vim -c "set hls"'
 
 
 # if running bash
