@@ -7,7 +7,16 @@
 # the default umask is set in /etc/profile; for setting the umask
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
+if [ -n "$DISPLAY" ]; then
+	echo "DISPLAY $DISPLAY"
+else 
+	echo "NO DISPLAY - cd to start"
+	cd ~/start
+fi
+
+#cd ~/start
 export DISPLAY=127.0.0.1:0.0
+
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
