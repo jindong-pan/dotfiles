@@ -8,13 +8,13 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 if [ -n "$DISPLAY" ]; then
-	echo "DISPLAY $DISPLAY"
+	echo "DISPLAY $DISPLAY :Not 1st login"
 else 
-	echo "NO DISPLAY - cd to start"
+	echo "NO DISPLAY 1st login - cd to start"
 	cd ~/start
 fi
 
-#cd ~/start
+#setup DISPLAY at first login
 export DISPLAY=127.0.0.1:0.0
 
 
