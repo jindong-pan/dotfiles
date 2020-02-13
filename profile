@@ -12,6 +12,7 @@ if [ -n "$DISPLAY" ]; then
 else 
 	echo "NO DISPLAY 1st login - cd to start"
 	cd ~/start
+	ls
 fi
 
 #setup DISPLAY at first login
@@ -38,3 +39,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+PATH=./:$PATH
