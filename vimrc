@@ -137,6 +137,10 @@ set expandtab
 let mapleader = ","
 inoremap <leader>e <esc>$a
 inoremap <leader>a <esc>0i
+inoremap <leader>f <esc>lWi
+inoremap <leader>b <esc>Bi
+inoremap <leader>w <esc>diWi
+inoremap <leader>y <esc>pi
 inoremap <leader>) <esc>f)a
 inoremap <leader>( <esc>F(a
 inoremap <leader>] <esc>f]a
@@ -147,6 +151,7 @@ inoremap <leader>{ <esc>F{a
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
 map <leader>r :source ~/.vimrc
+echo "Loading vimrc file"
 map Y y$
  
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
