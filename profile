@@ -20,6 +20,7 @@ export DISPLAY=127.0.0.1:0.0
 set -o vi
 alias vinu='vim -c "set nu"'
 alias vihls='vim -c "set hls"'
+alias mnt='sudo mount -t drvfs d: /mnt/d'
 
 
 # if running bash
@@ -38,6 +39,13 @@ fi
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "/mnt/d/c" ] ; then
+	cd /mnt/d/c
+else 
+	sudo mount -t drvfs d: /mnt/d
+	cd /mnt/d/c
 fi
 
 PATH=./:$PATH
