@@ -1,6 +1,7 @@
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
+set clipboard=unnamed
  
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
@@ -134,7 +135,7 @@ set expandtab
 " Mappings {{{1
 "
 " Useful mappings
-let mapleader = ","
+"let mapleader = ","
 inoremap <leader>e <esc>$a
 inoremap <leader>a <esc>0i
 inoremap <leader>) <esc>f)a
