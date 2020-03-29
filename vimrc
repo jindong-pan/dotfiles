@@ -1,6 +1,9 @@
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
+set clipboard=unnamed
+" Plugin for python
+
  
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
@@ -134,7 +137,7 @@ set expandtab
 " Mappings {{{1
 "
 " Useful mappings
-let mapleader = ","
+"let mapleader = "."
 inoremap <leader>e <esc>$a
 inoremap <leader>a <esc>0i
 inoremap <leader>f <esc>lWi
@@ -151,7 +154,6 @@ inoremap <leader>{ <esc>F{a
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
 map <leader>r :source ~/.vimrc
-echo "Loading vimrc file"
 map Y y$
  
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
@@ -159,3 +161,5 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
  
 "------------------------------------------------------------
+"color cheme
+colo murphy

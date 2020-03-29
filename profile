@@ -10,9 +10,16 @@
 if [ -n "$DISPLAY" ]; then
 	echo "DISPLAY $DISPLAY :Not 1st login"
 else 
-	echo "NO DISPLAY 1st login - cd to start"
-	cd ~/start
-	ls
+	echo "NO DISPLAY 1st login - cd to home"
+	cd ~
+fi
+
+if [ ! -e /mnt/g/anaconda3/ ]
+then sudo mount -t drvfs g: /mnt/g
+fi
+
+if [ ! -e /mnt/g/anaconda3/ ]
+then echo no /mnt/g/anaconda3 found !
 fi
 
 #setup DISPLAY at first login
@@ -20,6 +27,7 @@ export DISPLAY=127.0.0.1:0.0
 set -o vi
 alias vinu='vim -c "set nu"'
 alias vihls='vim -c "set hls"'
+alias mnt='sudo mount -t drvfs g: /mnt/g'
 
 
 # if running bash
@@ -39,5 +47,6 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
 
 PATH=./:$PATH
