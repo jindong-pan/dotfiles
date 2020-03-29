@@ -137,7 +137,7 @@ set expandtab
 " Mappings {{{1
 "
 " Useful mappings
-"let mapleader = "."
+"let mapleader = ","
 inoremap <leader>e <esc>$a
 inoremap <leader>a <esc>0i
 inoremap <leader>f <esc>lWi
