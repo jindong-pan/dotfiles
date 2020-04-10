@@ -1,0 +1,3 @@
+alias vinu='vim -c "set nu"'
+alias vihls='vim -c "set hls"'
+alias mnt='sudo mount -t drvfs d: /mnt/d && cd $(pwd)'
