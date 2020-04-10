@@ -25,9 +25,11 @@ fi
 #setup DISPLAY at first login
 export DISPLAY=127.0.0.1:0.0
 set -o vi
-alias vinu='vim -c "set nu"'
-alias vihls='vim -c "set hls"'
-alias mnt='sudo mount -t drvfs g: /mnt/g'
+
+if [ -e $HOME/dotfile/alias ]
+then source $HOME/dotfile/alias
+fi
+alias a='source $HOME/dotfile/alias'
 
 
 # if running bash
