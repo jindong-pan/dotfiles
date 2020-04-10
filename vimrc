@@ -1,8 +1,20 @@
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
+"sudo apt-get install vim-athena to enalbe +clipboard 
 set clipboard=unnamed
- 
+
+"pathogen to handle plugin
+execute pathogen#infect()
+"Plugin 'davidhalter/jedi-vim'
+"Completion <C-Space>
+"Goto assignment <leader>g (typical goto function)
+"Goto definition <leader>d (follow identifier as far as possible, includes imports and statements)
+"Goto (typing) stub <leader>s
+"Show Documentation/Pydoc K (shows a popup with assignments)
+"Renaming <leader>r
+"Usages <leader>n (shows all the usages of a name)
+"Open module, e.g. :Pyimport os (opens the os module)
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
@@ -98,7 +110,7 @@ set visualbell
 set t_vb=
  
 " Enable use of the mouse for all modes
-set mouse=a
+"set mouse=a
  
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
