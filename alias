@@ -1,3 +1,6 @@
 alias vinu='vim -c "set nu"'
 alias vihls='vim -c "set hls"'
 alias mnt='sudo mount -t drvfs g: /mnt/g && cd $(pwd)'
+alias tma='tmux attach -t'
+alias ggl='lynx -accept_all_cookies -cmd_log lynx.log www.google.com'
+alias lynxa='lynx -accept_all_cookies -cmd_log lynx.log'

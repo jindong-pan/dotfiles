@@ -11,7 +11,7 @@ if [ -n "$DISPLAY" ]; then
 	echo "DISPLAY $DISPLAY :Not 1st login"
 else 
 	echo "NO DISPLAY 1st login - cd to home"
-	cd ~
+	cd ~/start
 fi
 
 if [ ! -e /mnt/g/anaconda3/ ]
@@ -26,10 +26,10 @@ fi
 export DISPLAY=127.0.0.1:0.0
 set -o vi
 
-if [ -e $HOME/dotfile/alias ]
-then source $HOME/dotfile/alias
+if [ -e $HOME/dotfiles/alias ]
+then source $HOME/dotfiles/alias
 fi
-alias a='source $HOME/dotfile/alias'
+alias a='source $HOME/dotfiles/alias'
 
 
 # if running bash
